@@ -16,15 +16,7 @@ namespace RockPaperScissors
 
         protected Player(string name)
         {
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                throw new ArgumentException("Name cannot be empty. Please enter a valid name.");
-            }
-
-            if (name.All(char.IsDigit))
-            {
-                throw new ArgumentException("Name cannot consist solely of numbers. Please enter a valid name.");
-            }
+            Name = name;
         }
 
         public abstract Choice GetChoice();
